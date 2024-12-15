@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <div class="container">
-        <div class="left">
-            <canvas id="canvas"></canvas>
-        </div>
-        <div class="right">
-          <h1>Nama: Ahmad Fatih Ramadhani</h1>
-          <h2>NRP: 5025221191</h2>
-          <h3>Kelas: Grafika Komputer D</h3>
-          <div class="control-box">
-          <h3>Control:</h3>
-            <h4>Drag to Move</h4>
-            <h4>Scroll to zoom in/out</h4>
-          </div>
-        </div>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Object Viewer</title>
     <link rel="stylesheet" href="style/index.css" />
-    <!--
-    for most samples webgl-utils only provides shader compiling/linking and
-    canvas resizing because why clutter the examples with code that's the same in every sample.
-    See https://webglfundamentals.org/webgl/lessons/webgl-boilerplate.html
-    and https://webglfundamentals.org/webgl/lessons/webgl-resizing-the-canvas.html
-    for webgl-utils, m3, m4, and webgl-lessons-ui.
-    -->
     <script src="https://webglfundamentals.org/webgl/resources/webgl-utils.js"></script>
     <script src="https://webglfundamentals.org/webgl/resources/m4.js"></script>
     <script type="text/javascript" src="js/OBJparser.js"></script>
@@ -30,5 +12,27 @@
     <script type="text/javascript" src="js/IOhandler.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="left">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="right">
+        <h1>Nama: Ahmad Fatih Ramadhani</h1>
+        <h2>NRP: 5025221191</h2>
+        <h3>Kelas: Grafika Komputer D</h3>
+        <div class="control-box">
+          <h3>Control:</h3>
+          <h4>Drag to Move</h4>
+          <h4>Scroll to zoom in/out</h4>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        main(); // Call the main function after the DOM is fully loaded
+      });
+    </script>
+  </body>
 </html>
