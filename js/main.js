@@ -51,12 +51,12 @@ async function main() {
   const meshProgramInfo = webglUtils.createProgramInfo(gl, [vs, fs]);
 
   // Load and parse OBJ file
-  const response = await fetch("/data/gelas.obj");
+  const response = await fetch("../data/gelas.obj");
   const text = await response.text();
   const obj = parseOBJ(text);
 
   // Load and parse MTL file
-  const mtlResponse = await fetch("/data/gelas.mtl");
+  const mtlResponse = await fetch("../data/gelas.mtl");
   const mtlText = await mtlResponse.text();
   const materials = await parseMTL(mtlText);
 
